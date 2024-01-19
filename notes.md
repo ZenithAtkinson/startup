@@ -3,3 +3,6 @@ For notes syntax stuff: [notes](https://docs.github.com/en/get-started/writing-o
 
 # Git and Github notes:
 When using git, we must add, commit, and then push to get it to github. We can clone from github, and once we have, then we can just pull everything we need. And we can use the VS code interface to deal with merge issues.
+
+# EC2
+Need to create an actual server for the webpage through EC2. See https://learn.cs260.click/page/webServers/amazonWebServicesEc2/amazonWebServicesEc2_md for notes on this. The address to the wesite is http://54.234.216.97/. SSH using ssh -i /c/Users/zenit/.ssh/ImHungry.pem ubuntu@54.234.216.97

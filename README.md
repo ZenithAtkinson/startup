@@ -28,6 +28,6 @@
 
 ![Main Page Sketch:](https://github.com/ZenithAtkinson/startup/blob/main/Images/Screenshot%3A%20Main%20page%20sketch)
 
-![Add event sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/Screenshot%3A%20add%20event%20sketch)
+![Add event sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/Addevent_screenshot.png)
 
 ![Main Page View Event Sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/Screenshot%3A%20main%20page%20view%20events%20sketch)

@@ -26,8 +26,8 @@
 
 ### Design Sketches (ninjamock.com)
 
-![Main Page Sketch:](https://github.com/ZenithAtkinson/startup/blob/main/Images/Screenshot%3A%20Main%20page%20sketch)
+![Main Page Sketch:](https://github.com/ZenithAtkinson/startup/blob/main/Images/mainpage_screenshot.png)
 
 ![Add event sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/Addevent_screenshot.png)
 
-![Main Page View Event Sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/Screenshot%3A%20main%20page%20view%20events%20sketch)
+![Main Page View Event Sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/viewevent_screenshot.png)

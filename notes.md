@@ -10,3 +10,6 @@ Need to create an actual server for the webpage through EC2. See https://learn.c
 # Adding security (Caddy and HTTPS)
 https://learn.cs260.click/page/webServers/https/https_md
 We just ssh into our server, and modify our caddy file to include our new domain name. Domain name was done from these instructions: https://learn.cs260.click/page/webServers/amazonWebServicesRoute53/amazonWebServicesRoute53_md
+
+## The Simon deployment
+Added an example of Simon to the GitHub, and now have the simon.collegefeastfinder.click subdomain. Has a deploy .sh script that deploys the whole thing, and examples on how the HTML should work for the pages and how to connect them to each other.

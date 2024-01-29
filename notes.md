@@ -13,3 +13,6 @@ We just ssh into our server, and modify our caddy file to include our new domain
 
 ## The Simon deployment
 Added an example of Simon to the GitHub, and now have the simon.collegefeastfinder.click subdomain. Has a deploy .sh script that deploys the whole thing, and examples on how the HTML should work for the pages and how to connect them to each other.
+
+# CSS notes
+Lots of documentation online. The main feature of CSS is that everything has its own children and descendants and when you apply something, everything below it gets applied too. You can also give a class to a group of elements you want to stylize or an ID to a specific element you want to stylize that you initialize through HTML and then customize in CSS.

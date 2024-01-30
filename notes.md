@@ -16,3 +16,6 @@ Added an example of Simon to the GitHub, and now have the simon.collegefeastfind
 
 # CSS notes
 Lots of documentation online. The main feature of CSS is that everything has its own children and descendants and when you apply something, everything below it gets applied too. You can also give a class to a group of elements you want to stylize or an ID to a specific element you want to stylize that you initialize through HTML and then customize in CSS.
+
+# Initial HTML Code
+Need x unmber of pages, (index, about, scores, play). Need one for login, profile /  your events, creating an event, dashboard(index), 

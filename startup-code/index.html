@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="index.css"> <!--CSS link-->
     <meta charset="UTF-8">
+    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <title>College Feast Finder HTML</title>
 </head>
 <body>
     <header>
-        <h1>myapp</h1>
+        <h1>College Feast Finder</h1>
+        <hr>
     </header>
     <main>
         <section>
-            <h2>login</h2>
+            <nav>
             <menu>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="a.html">Play</a></li>
-                <li><a href="b.html">Scores</a></li>
-                <li><a href="c.html">About</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile / View your events</a></li>
+                <li><a href="eventcreation.html">Create an Event!</a></li>
+                <li><a href="about.html">About</a></li>
               </menu>
-
-
+            </nav>
+            <hr>
+            <section>
+                <!-- Events table -->
+                <h2>Events</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Time</th>
+                            <th>Location</th>
+                            <th>Details</th>
+                            <th>RSVP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sample Event</td>
+                            <td>12:00 PM</td>
+                            <td>Location XYZ</td>
+                            <td>Event Details</td>
+                            <td><button>RSVP</button></td>
+                        </tr>
+                        <!-- need to add the actual events rows here-->
+                    </tbody>
+                </table>
+            </section>
+            <hr>
+            <p>Login here:</p>
+            <form method="get" action="play.html">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name here" />
+              <button type="submit">Login</button>
+            </form>
         </section>
+        <hr>
         <footer>
             <a href="https://github.com/ZenithAtkinson/startup">GitHub</a>
         </footer>

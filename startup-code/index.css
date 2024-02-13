@@ -1,0 +1,110 @@
+/* Color palette variables */
+:root {
+    --dark-blue: #0F084B;
+    --medium-blue: #26408B;
+    --light-blue: #A6CFD5;
+}
+
+/* Apply a reset for consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--dark-blue);
+}
+
+/* Header styles */
+header {
+    background-color: var(--medium-blue);
+    color: white;
+    padding: 1em;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    padding: 0.5em;
+}
+
+nav a {
+    color: var(--light-blue);
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+/* Style for navigation links to highlight on hover */
+nav a:hover {
+    background-color: var(--medium-blue);
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+/* Event table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--medium-blue);
+    padding: 0.5em;
+    text-align: left;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+input, button {
+    padding: 0.5em;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    text-align: center;
+    padding: 1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 0.5em;
+    }
+
+    nav a {
+        padding: 0.25em;
+    }
+
+    form input, form button {
+        width: 100%;
+    }
+}

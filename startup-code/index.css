@@ -1,58 +1,97 @@
-/* Color palette variables */
+/*Initializes the colors (i think these are too dark*/
 :root {
     --dark-blue: #0F084B;
     --medium-blue: #26408B;
     --light-blue: #A6CFD5;
 }
-
-/* Apply a reset for consistent styling across browsers */
+/*Resets styling, see stackoverflow*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic styling */
+
 body {
     font-family: Arial, sans-serif;
     color: var(--dark-blue);
 }
 
-/* Header styles */
 header {
-    background-color: var(--medium-blue);
-    color: white;
-    padding: 1em;
-}
-
-/* Navigation styles */
-nav {
     display: flex;
     justify-content: space-between;
-    background-color: var(--dark-blue);
-    color: var(--light-blue);
-    padding: 0.5em;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--medium-blue);
+    color: white;
+
 }
 
+
+.login-section a {
+    text-decoration: none;
+    color: white; 
+    font-size: 16px; 
+}
+
+.login-box { /*Really similar to header*/
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 320px;
+    padding: 4px 6px;
+    background-color: var(--light-blue);
+    /*padding: 0.5em;*/
+    /*margin: 1em;*/
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+
+nav, table, th, td, button, input, .login-box { /*Trying to round the corners of the rectangles*/ 
+    border-radius: 8px;
+}
+nav {
+     background-color: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
 nav a {
     color: var(--light-blue);
     text-decoration: none;
     padding: 0.5em;
+    border-radius: 8px;
 }
 
-/* Style for navigation links to highlight on hover */
+/*Makes it so when you hover over hte actual links, they "pop" out*/
 nav a:hover {
     background-color: var(--medium-blue);
 }
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
 
-/* Main content styles */
+.main-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.main-nav li a:hover {
+    text-decoration: underline;
+}
 main {
     display: flex;
     flex-direction: column;
     padding: 1em;
 }
 
-/* Event table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -64,7 +103,6 @@ th, td {
     text-align: left;
 }
 
-/* Form styles */
 form {
     display: flex;
     flex-direction: column;
@@ -76,15 +114,16 @@ input, button {
     padding: 0.5em;
 }
 
-/* Footer styles */
+
+
 footer {
     background-color: var(--dark-blue);
-    color: var(--light-blue);
+    color: var(white);
     text-align: center;
     padding: 1em;
 }
 
-/* Responsive design */
+/*Responseive design? Ripped from CSS github tutorial*/
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -106,5 +145,11 @@ footer {
 
     form input, form button {
         width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .login-box {
+        position: column;
+        margin: 0.5em 0;
     }
 }

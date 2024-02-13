@@ -10,18 +10,32 @@
 <body>
     <header>
         <h1>College Feast Finder</h1>
+        <h2>Dashboard / Main page</h2>
         <hr>
-    </header>
-    <main>
-        <section>
-            <nav>
-            <menu>
+        <nav class="main-nav">
+            <ul>
                 <li><a href="index.html">Dashboard</a></li>
                 <li><a href="profile.html">Profile / View your events</a></li>
                 <li><a href="eventcreation.html">Create an Event!</a></li>
                 <li><a href="about.html">About</a></li>
-              </menu>
-            </nav>
+            </ul>
+        </nav>
+        <div class="login-section">
+            <a href="login.html">Login</a> <!-- Update with actual login link -->
+        </div>
+    </header>
+    <!-- LOGIN FORM POPUP THINGY RIPPED FROM KSL, cant do this until I have javascript -->
+    <!-- <div id="login-form-popup" class="login-popup">
+        Login form goes here -->
+        <!--<form>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit">Login</button>
+            <button type="button" onclick="toggleLoginForm()">Close</button>
+        </form>
+    </div> -->
+    
+    <main>
             <hr>
             <section>
                 <!-- Events table -->
@@ -44,21 +58,39 @@
                             <td>Event Details</td>
                             <td><button>RSVP</button></td>
                         </tr>
+                        <tr>
+                            <td>Sample Event</td>
+                            <td>12:00 PM</td>
+                            <td>Location XYZ</td>
+                            <td>Event Details</td>
+                            <td><button>RSVP</button></td>
+                        </tr>
+                        <tr>
+                            <td>Sample Event</td>
+                            <td>12:00 PM</td>
+                            <td>Location XYZ</td>
+                            <td>Event Details</td>
+                            <td><button>RSVP</button></td>
+                        </tr>
+                        <tr>
+                            <td>Sample Event</td>
+                            <td>12:00 PM</td>
+                            <td>Location XYZ</td>
+                            <td>Event Details</td>
+                            <td><button>RSVP</button></td>
+                        </tr>
                         <!-- need to add the actual events rows here-->
                     </tbody>
                 </table>
             </section>
             <hr>
-            <p>Login here:</p>
-            <form method="get" action="play.html">
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Your name here" />
-              <button type="submit">Login</button>
+            <!--Removed old login box-->
             </form>
         </section>
         <hr>
+        
         <footer>
-            <a href="https://github.com/ZenithAtkinson/startup">GitHub</a>
+            <a href="https://github.com/ZenithAtkinson/startup" style="color: white">GitHub</a>
         </footer>
     </main>
 </body>

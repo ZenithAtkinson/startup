@@ -17,7 +17,7 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*spaces everything out https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content*/
     align-items: center;
     padding: 10px 20px;
     background-color: var(--medium-blue);
@@ -26,49 +26,36 @@ header {
 }
 
 
-.login-section a {
+.login-sect a { /*unused*/
     text-decoration: none;
     color: white; 
     font-size: 16px; 
-}
-
-.login-box { /*Really similar to header*/
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    width: 320px;
-    padding: 4px 6px;
-    background-color: var(--light-blue);
-    /*padding: 0.5em;*/
+     /*padding: 0.5em;*/
     /*margin: 1em;*/
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-
-nav, table, th, td, button, input, .login-box { /*Trying to round the corners of the rectangles*/ 
-    border-radius: 8px;
 }
 
 nav {
-     background-color: var(--dark-blue);
+    background-color: var(--dark-blue);
     display: flex;
     justify-content: space-between;
     padding: 10px;
     align-items: center;
-}
-nav a {
-    color: var(--light-blue);
-    text-decoration: none;
-    padding: 0.5em;
     border-radius: 8px;
 }
+nav a {/*syntax that targents only the links*/
+    color: var(--light-blue);
+    text-decoration: none; /*removes the underline from the links*/
+    padding: 0.5em;
+    border-radius: 8px;
+    color: white;
+}
 
-/*Makes it so when you hover over hte actual links, they "pop" out*/
+/*Makes it so when you hover over hte actual links, they "pop" out or "hoever"*/
 nav a:hover {
     background-color: var(--medium-blue);
 }
-.main-nav ul {
+
+.main-nav ul {/*list turned sideways*/
     list-style: none;
     display: flex;
     gap: 20px;
@@ -76,19 +63,11 @@ nav a:hover {
     padding: 0;
 }
 
-.main-nav li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
-
-.main-nav li a:hover {
-    text-decoration: underline;
-}
 main {
+    font-size: 145%;
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    padding: 20px;
 }
 
 table {
@@ -105,26 +84,22 @@ th {
     background-color: #f2f2f2;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 1em;
-}
-
-input, button {
-    padding: 0.5em;
-}
-
 footer {
+    border-radius: 8px;
     background-color: var(--dark-blue);
     color: var(white);
     text-align: center;
-    padding: 1em;
+    padding: 14px;
+    float: bottom; /*does this work*/
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /*Responseive design?see CSS github tutorial*/
-@media (max-width: 768px) {
+@media (max-width: 750px) {
     nav {
         flex-direction: column;
     }
@@ -134,7 +109,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     header, footer {
         padding: 0.5em;
     }
@@ -147,7 +122,7 @@ footer {
         width: 100%;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .login-box {
         position: column;
         margin: 0.5em 0;

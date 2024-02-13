@@ -23,7 +23,7 @@ td {
     border-bottom: 1px solid #ddd;
 }
 /*make thinner*/
-td:first-child {
+td:first-child {/*accesses first column*/
     font-size:150%;
     align-items: right;
     width: 5%; 
@@ -39,14 +39,13 @@ input[type="text"] {
 }
 
 /*Checker boxer*/
-
 .checkbox-container label {
-    display: block;
     font-size: 30px;
 }
 .checkbox-container input[type="checkbox"] {
     margin-top: 10px;
     margin-left: 30px;
+    margin-bottom: 20px;
     width: 30px;
     height: 30px;
     

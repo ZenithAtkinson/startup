@@ -1,14 +1,12 @@
 /*Initializes the colors (i think these are too dark*/
-:root {
-    --dark-blue: #0F084B;
-    --medium-blue: #26408B;
-    --light-blue: #A6CFD5;
-}
-/*Resets styling, see stackoverflow*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --dark-blue: #0F084B;
+    --medium-blue: #26408B;
+    --light-blue: #A6CFD5;
 }
 
 
@@ -51,6 +49,7 @@ header {
 nav, table, th, td, button, input, .login-box { /*Trying to round the corners of the rectangles*/ 
     border-radius: 8px;
 }
+
 nav {
      background-color: var(--dark-blue);
     display: flex;
@@ -117,8 +116,6 @@ input, button {
     padding: 0.5em;
 }
 
-
-
 footer {
     background-color: var(--dark-blue);
     color: var(white);
@@ -126,7 +123,7 @@ footer {
     padding: 1em;
 }
 
-/*Responseive design? Ripped from CSS github tutorial*/
+/*Responseive design?see CSS github tutorial*/
 @media (max-width: 768px) {
     nav {
         flex-direction: column;

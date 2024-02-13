@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between; /*spaces everything out https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content*/
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 21px;
     background-color: var(--medium-blue);
     color: white;
 

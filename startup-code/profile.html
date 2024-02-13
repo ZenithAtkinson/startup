@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="index.css"> <!--CSS link-->
+    <link rel="stylesheet" href="profile.css"> <!--CSS link-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
@@ -20,7 +21,10 @@
             </ul>
         </nav>
         <div class="login-section">
-            <a href="login.html">Login</a>
+            <img src="login-icon.png" 
+     width="30" 
+     height="30" />
+            <a href="login.html">Login</a> <!--placeholder for javascript-->
         </div>
     </header>
     <main>
@@ -29,6 +33,30 @@
             <p>Database data</p>
 
         </section>
+        <section class="past-evs">
+            <h2>Your Past Events</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>[Event Name]</td>
+                        <td>[Event Time]</td>
+                        <td>[Event Location]</td>
+                        <td>[Event Details]</td>
+                    </tr>
+                    <!-- more rows would be added based on num of past events...-->
+                </tbody>
+            </table>
+        </section>
+
         <footer>
             <a href="https://github.com/ZenithAtkinson/startup" style="color: white">GitHub</a>
         </footer>

@@ -31,3 +31,12 @@
 ![Add event sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/Addevent_screenshot.png)
 
 ![Main Page View Event Sketch](https://github.com/ZenithAtkinson/startup/blob/main/Images/viewevent_screenshot.png)
+
+# Initial HTML Deliverable
+I have 4 sites for the website: The index, a profile site, an about, and an event creation. Each one has a navigation menu that can direct you to every other website, along with a header and footer section. 
+- Index: The index site, aka dashboard aka the home, has all the necessary info needed for viewing a list of upcoming events near you. The table has all the necessary values for the events. Also has a login section.
+- Profile: A page for signing in, and viewing your personal profile including all the events you have created.
+- About: Has general information about the website and contact info
+- Event creation: Has a table will boxes to fill in for creating an event with all the necessary criteria.
+
+There are dividers between different sections, and different sized fonts.

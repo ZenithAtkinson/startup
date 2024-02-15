@@ -40,3 +40,8 @@ I have 4 sites for the website: The index, a profile site, an about, and an even
 - Event creation: Has a table will boxes to fill in for creating an event with all the necessary criteria.
 
 There are dividers between different sections, and different sized fonts.
+
+# CSS deliverable
+This was much more difficult than the HTML deliverable, and I will probably have to continue to update and change it in the future depending on where my website goes. I want to add functionality with popups and such, but I think I need to wait to use javascript for that, so some more CSS changes are expected.
+I learned a lot regarding CSS. I gave all my .html files access to one main index.css file to keep the formatting and rounding of blocks and colors the same without having to modify the code. It was hard for me to get all the links on the same line at the top with the title but I was able to break them from their original formatting. I also made a lot of things just have flex by default, and added some @media tags at the bottom that were similar to the ones shown in lecture. 
+I also increased the sizes of the sample tables, and added a login button symbol that will be a popup for the login window. For now, it is just a link that doesnt go anywhere.

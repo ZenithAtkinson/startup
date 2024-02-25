@@ -8,6 +8,8 @@
     <script src="events.js"></script>
     <script src="login.js"></script>
     <script src="usernames.js"></script>
+    <script src="profile.js" defer></script>
+
     <title>Your Profile</title>
 </head>
 <body>
@@ -24,6 +26,7 @@
         </nav>
     </header>
     <main>
+        <div id="logged-in?" style="display: none;">
         <h2 id="welcome-message"></h2>
         <hr class="solid">
         <section id="profile-info">
@@ -47,6 +50,10 @@
         <section id="logout-section">
             <button id="logout-button">Log Out</button>
         </section>
+    </div>
+    <div id="not-loggedin" style="display: none;">
+        <p>Not logged in. Please log in</p>
+    </div>
     </main>
     <footer>
         <a href="https://github.com/ZenithAtkinson/startup" style="color: white">GitHub</a>

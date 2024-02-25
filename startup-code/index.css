@@ -25,6 +25,11 @@ header {
 
 }
 
+#login-img {
+    /*change to white*/
+    filter: brightness(0) invert(1);
+}
+
 
 .login-sect a { /*unused*/
     text-decoration: none;

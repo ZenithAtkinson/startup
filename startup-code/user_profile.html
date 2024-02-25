@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css"> <!--CSS link-->
-    <link rel="stylesheet" href="profile.css"> <!--CSS link-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="profile.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="events.js"></script>
     <script src="login.js"></script>
     <script src="usernames.js"></script>
-    <title>Your events page</title>
+    <title>Your Profile</title>
 </head>
 <body>
     <header>
         <h1>College Feast Finder</h1>
-        <h2>Your Events</h2>
-        
+        <h2>Your Profile</h2>
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Dashboard</a></li>
-                <li><a href="profile.html">View your events</a></li>
+                <li><a href="profile.html">Profile</a></li>
                 <li><a href="eventcreation.html">Create an Event!</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-        <div class="login-sect" id="login-sect"><!-- where the login png + link(?) are. Popup?-->
-            <img src="login-icon.png" width="30" height="30" />
-        <input type="text" id="name" placeholder="Your name here" />
-        <button class="btn btn-primary" onclick="login()">Login</button>
-        
-        </div>
-        
     </header>
     <main>
-        <section>
-            <h2>app component</h2>
-            <p>Database data</p>
-
+        <h2 id="welcome-message"></h2>
+        <hr class="solid">
+        <section id="profile-info">
+            <h2>Profile Information</h2>
+            <p>Date Profile Created: <span id="profile-date">[Date]</span></p>
+            <p>Number of Posts Created: <span id="posts-count">[Number]</span></p>
         </section>
-        <section class="past-evs">
-            <h2>Your Past Events</h2>
-            <table id="prof-evs">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Time</th>
-                        <th>Location</th>
-                        <th>Details</th>
-                        <th>RSVP?</th>
-                    </tr>
-                </thead>
-                <tbody>
-\
-                    <!-- more rows would be added based on num of past events...-->
-                </tbody>
-            </table>
+        <section id="profile-settings">
+            <h2>Settings</h2>
+            <div>
+                <label for="new-username">Change Username:</label>
+                <input type="text" id="new-username">
+                <button onclick="changeUsername()">Update Username</button>
+            </div>
+            <div>
+                <label for="new-password">Change Password:</label>
+                <input type="password" id="new-password">
+                <button onclick="changePassword()">Update Password</button>
+            </div>
         </section>
-
-        <footer>
-            <a href="https://github.com/ZenithAtkinson/startup" style="color: white">GitHub</a>
-        </footer>
+        <section id="logout-section">
+            <button id="logout-button">Log Out</button>
+        </section>
     </main>
+    <footer>
+        <a href="https://github.com/ZenithAtkinson/startup" style="color: white">GitHub</a>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const username = localStorage.getItem('userName');
+          if (username) {
+            document.getElementById('welcome-message').textContent = `Welcome, ${username}`;
+          }
+        });
+      </script>
 </body>
 </html>

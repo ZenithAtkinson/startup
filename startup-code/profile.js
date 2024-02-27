@@ -1,3 +1,5 @@
+// username is username variable, sotre in storage as userName
+
 document.addEventListener('DOMContentLoaded', function() {
   const username = localStorage.getItem('userName');
   if (username) {
@@ -12,4 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     document.getElementById('not-loggedin').style.display = 'block';
   }
+
+
+  //FOR USERNAME AND PASSWORD CHANGE
+  
 });
+function changeUsername() {
+  const newName = document.getElementById('new-name').value;
+
+  //to local storage
+  localStorage.setItem('userName', newName);
+}
+function changePassowrd() {//UNSUED
+  const newPassword = document.getElementById('new-password').value;
+
+  //to local storage
+  localStorage.setItem('userName', newName);
+}

@@ -53,3 +53,22 @@ I learned a lot regarding CSS:
 - Rounded differenct elements and boxes
 - Gave 1 navigation bar at the top with the different pages, with a login on the right. Top nav title changes depending on page.
 - Changed fonts, text color, padding, and margins. 
+
+# JavaScript deliverable
+In my Javascript deliverable, I completed the following:
+- Added login functionality
+    - Added a profile page too that will match the user, and allows them to change their username.
+    - The user's name is also displayed on everypage at the top right, next to the profile picture that takes you to the profile page.
+- Logout functionality
+    - Also located in the profile page. Need to go to one of the main pages to login in top right.
+- Added event creation
+    - You can now create events and fill out the different fields that are all stored into local storage, and then are displayed on the "view your events" page.
+- Variables store in local storage:
+    - Username
+    - Event object
+        - Title
+        - Date (needs regex implementation for inputting time)
+        - Location
+        - Details
+        - RSVP boolean checkbox
+- The data from other users will also be displayed on the home page, but we dont know how to do that yet.

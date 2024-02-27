@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //get storage
     const events = JSON.parse(localStorage.getItem('events')) || [];
   
-    //new rows for each element
+    //new rows for each element, HTML implementation 
     events.forEach(eventData => {
       const newRow = `
         <tr>

@@ -25,11 +25,33 @@ app.post('/events', (req, res) => {
   res.status(201).send('Event added successfully');
 });
 
-// Endpoint to retrieve events for a specific user
+// Endpoint to retrieve events for user
 app.get('/events/:username', (req, res) => {
   const username = req.params.username;
   const userEvents = events.filter(event => event.username === username);
   res.json(userEvents);
+});
+
+//Endpoint for updating username
+app.put('/user/:oldUsername', (req, res) => {
+  const oldUsername = req.params.oldUsername;
+  const { newUsername } = req.body;
+
+  /* checking for existing? see https://stackoverflow.com/questions/53715870/javascript-checking-if-username-already-existsduplicate
+  const usernameExists = events.some(event => event.username === newUsername);
+  if (usernameExists) {
+    return res.status(400).send({ success: false, message: 'New username already exists.' });
+  }*/
+
+  //Updating Events
+  events.forEach(event => {
+    if (event.username === oldUsername) {
+      event.username = newUsername;
+    }
+  });
+
+  //Print: Sucess!
+  res.send({ success: true, message: 'Username changed.' });
 });
 
 app.use((_req, res) => {
@@ -39,3 +61,4 @@ app.use((_req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+

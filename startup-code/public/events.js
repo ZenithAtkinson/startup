@@ -44,15 +44,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   function updateEventTable() {
+    const username = localStorage.getItem("userName"); // Retrieve the current user's username
     const tableBody = document.querySelector('#prof-evs tbody');
     // Clear the table body to prepare for new data
     tableBody.innerHTML = '';
   
     // Fetch events from the server
-    fetch('/api/events')
+    fetch(`/api/events/${encodeURIComponent(username)}`)
       .then(response => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('Network Error');
         }
         return response.json();
       })
@@ -71,10 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       })
       .catch((error) => {
-        console.error('There has been a problem with your fetch operation:', error);
+        console.error('ERROR: ', error);
       });
   }
-  
   
 
   //saving events? so multiple can be used at once. See: https://javascript.info/localstorage

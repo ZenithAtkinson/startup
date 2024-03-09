@@ -8,7 +8,7 @@ const port = process.argv.length > 2 ? process.argv[2] : 3000;
 app.use(express.json());
 app.use(express.static('public'));
 
-var apiRouter = express.Router();
+//var apiRouter = express.Router();
 
 let events = []; // This array will store event objects, including a 'username' property
 
@@ -20,7 +20,7 @@ app.get('/user/:username', (req, res) => {
 
 // Endpoint to add a new event, now including username in the event data
 app.post('/events', (req, res) => {
-  const eventData = req.body; // Includes 'username' from the client
+  const eventData = req.body; // Assumes eventData includes 'username'
   events.unshift(eventData); // Add the new event at the start of the array
   res.status(201).send('Event added successfully');
 });
@@ -31,8 +31,6 @@ app.get('/events/:username', (req, res) => {
   const userEvents = events.filter(event => event.username === username);
   res.json(userEvents);
 });
-
-app.use('/api', apiRouter);
 
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });

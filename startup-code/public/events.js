@@ -45,39 +45,59 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function updateEventTable() {
     const tableBody = document.querySelector('#prof-evs tbody');
-    //clearing... just in case
+    // Clear the table body to prepare for new data
     tableBody.innerHTML = '';
   
-    //get storage
-    const events = JSON.parse(localStorage.getItem('events')) || [];
-  
-    //new rows for each element, HTML implementation 
-    events.forEach(eventData => {
-      const newRow = `
-        <tr>
-          <td>${eventData.name}</td>
-          <td>${eventData.time}</td>
-          <td>${eventData.location}</td>
-          <td>${eventData.details}</td>
-          <td>${eventData.rsvp ? 'Yes' : 'No'}</td>
-        </tr>`;
-      tableBody.innerHTML += newRow; //new rows
-    });
+    // Fetch events from the server
+    fetch('/api/events')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(events => {
+        // Iterate through each event and add a row to the table
+        events.forEach(eventData => {
+          const newRow = `
+            <tr>
+              <td>${eventData.name}</td>
+              <td>${eventData.time}</td>
+              <td>${eventData.location}</td>
+              <td>${eventData.details}</td>
+              <td>${eventData.rsvp ? 'Yes' : 'No'}</td>
+            </tr>`;
+          tableBody.innerHTML += newRow;
+        });
+      })
+      .catch((error) => {
+        console.error('There has been a problem with your fetch operation:', error);
+      });
   }
+  
   
 
   //saving events? so multiple can be used at once. See: https://javascript.info/localstorage
   function saveEvent(eventData) {
-    //Get save data
-    const events = JSON.parse(localStorage.getItem('events')) || [];
-    
-    //Adding new event
-    events.unshift(eventData);
-    
-    //Up to... 4 events
-    while (events.length > 4) {
-      events.pop();
-    }
-    
-    localStorage.setItem('events', JSON.stringify(events));
+    fetch('/api/events', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(eventData),
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text(); // or .json() if your server sends back JSON
+    })
+    .then(() => {
+      alert('Event saved successfully!');
+      document.querySelector('#smessage').textContent = 'Event saved successfully!';
+      updateEventTable(); // Reload the event table to include the new event
+    })
+    .catch((error) => {
+      console.error('There has been a problem with your fetch operation:', error);
+    });
   }

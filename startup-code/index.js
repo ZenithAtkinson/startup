@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-//Just incase i run into any cors errors:
 const cors = require('cors');
 app.use(cors());
 
@@ -11,14 +10,29 @@ app.use(express.static('public'));
 
 var apiRouter = express.Router();
 
-//Modify the route to match the fetch request in login.js
-apiRouter.get('/user/:username', (req, res) => {
+let events = []; // This array will store event objects, including a 'username' property
+
+// Existing user endpoint (unchanged)
+app.get('/user/:username', (req, res) => {
   const username = req.params.username;
-  res.json({ success: true, username: username});
+  res.json({ success: true, username: username });
 });
 
-//use the modified router with the '/api' prefix?
-app.use(`/api`, apiRouter);
+// Endpoint to add a new event, now including username in the event data
+app.post('/events', (req, res) => {
+  const eventData = req.body; // Includes 'username' from the client
+  events.unshift(eventData); // Add the new event at the start of the array
+  res.status(201).send('Event added successfully');
+});
+
+// Endpoint to retrieve events for a specific user
+app.get('/events/:username', (req, res) => {
+  const username = req.params.username;
+  const userEvents = events.filter(event => event.username === username);
+  res.json(userEvents);
+});
+
+app.use('/api', apiRouter);
 
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });

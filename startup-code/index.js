@@ -54,6 +54,11 @@ app.put('/user/:oldUsername', (req, res) => {
   res.send({ success: true, message: 'Username changed.' });
 });
 
+//Gets every event, for main page
+app.get('/events', (req, res) => {
+  res.json(events);
+});
+
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
 });

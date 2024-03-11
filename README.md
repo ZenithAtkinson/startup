@@ -72,3 +72,13 @@ In my Javascript deliverable, I completed the following:
         - Details
         - RSVP boolean checkbox
 - The data from other users will also be displayed on the home page, but we dont know how to do that yet.
+
+# Webservice Deliverable
+I added a lot of functionality that was directed by the course readings, including stuff related to Node.js and Express.
+- Built server on port 3000, added key server functionality.
+- Added webservice endpoint for getting and pushing event object
+    - Still allows event object creation and display on profile
+    - Connected event objects based on username
+    - This can later be used to get and populate index page with data from other users.
+- Added endpoints for logging in, saving usernames, and allowing username changes.
+    -When username is changed, all data is transferes from old to new username.

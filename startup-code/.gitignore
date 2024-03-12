@@ -1,0 +1,4 @@
+#ignoring these files in git add .
+#Need to remove it from being tracked, WITHOUT deleting it
+node_modules
+dbConfig.json

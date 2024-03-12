@@ -82,3 +82,4 @@ I added a lot of functionality that was directed by the course readings, includi
     - This can later be used to get and populate index page with data from other users.
 - Added endpoints for logging in, saving usernames, and allowing username changes.
     -When username is changed, all data is transferes from old to new username.
+- Future endpoint + file for mainpage updates based on other/all users

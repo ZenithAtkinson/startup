@@ -4,7 +4,7 @@ function login() {
   const userName = nameEl.value;
   localStorage.setItem("userName", userName);
 
-  // Immediately use fetch to interact with the server after setting the username
+  //immediately use fetch to interact with the server after setting the username
   fetch(`/api/user/${encodeURIComponent(userName)}`)
     .then(response => {
       if (response.ok) {
@@ -14,11 +14,11 @@ function login() {
     })
     .then(data => {
       console.log('User found:', data.username);
-      // Proceed with redirection or additional actions here after successful fetch
+      //p[roceed with redirection or additional actions here after successful fetch
       window.location.href = "index.html";
     })
     .catch(error => {
       console.error('There has been a problem with your fetch operation:', error);
-      // Handle errors or failed fetch operation here
+      //handle errors or failed fetch operation here
     });
 }

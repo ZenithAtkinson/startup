@@ -10,22 +10,22 @@ app.use(express.static('public'));
 
 //var apiRouter = express.Router();
 
-let events = []; // This array will store event objects, including a 'username' property
+let events = []; //this array will store event objects, including a 'username' property
 
-// Existing user endpoint (unchanged)
+//Existing user endpoint (unchanged)
 app.get('/user/:username', (req, res) => {
   const username = req.params.username;
   res.json({ success: true, username: username });
 });
 
-// Endpoint to add a new event, now including username in the event data
+//Endpoint to add a new event, now including username in the event data
 app.post('/events', (req, res) => {
   const eventData = req.body; // Assumes eventData includes 'username'
   events.unshift(eventData); // Add the new event at the start of the array
   res.status(201).send('Event added successfully');
 });
 
-// Endpoint to retrieve events for user
+//ndpoint to retrieve events for user
 app.get('/events/:username', (req, res) => {
   const username = req.params.username;
   const userEvents = events.filter(event => event.username === username);

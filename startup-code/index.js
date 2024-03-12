@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -7,6 +8,11 @@ const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
 app.use(express.json());
 app.use(express.static('public'));
+//app.use(express.static(path.join(__dirname, 'public')));
+//console.log('FILES from: ', path.join(__dirname, 'public')); 
+
+var apiRouter = express.Router();
+app.use(`/api`, apiRouter);
 
 //var apiRouter = express.Router();
 
@@ -54,7 +60,7 @@ app.put('/user/:oldUsername', (req, res) => {
   res.send({ success: true, message: 'Username changed.' });
 });
 
-//Gets every event, for main page
+//gets every event, for main page, needs to be fully implemented with all user data
 app.get('/events', (req, res) => {
   res.json(events);
 });

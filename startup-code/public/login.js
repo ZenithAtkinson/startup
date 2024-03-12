@@ -18,7 +18,7 @@ function login() {
       window.location.href = "index.html";
     })
     .catch(error => {
-      console.error('There has been a problem with your fetch operation:', error);
-      //handle errors or failed fetch operation here
+      console.error('ERROR', error);
+
     });
 }

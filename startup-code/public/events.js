@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
               time: eventTime,
               details: eventDetails,
               rsvp: eventRSVP,
-              username: localStorage.getItem("userName") //Username from local storage:
+              username: localStorage.getItem("userName") //local storage
           };
 
           saveEvent(eventData);
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateEventTable() {
     const username = localStorage.getItem("userName"); //Current username
     const tableBody = document.querySelector('#prof-evs tbody');
-    // Clear the table body to prepare for new data
-    tableBody.innerHTML = '';
+    
+    tableBody.innerHTML = ''; //clearing
   
     //Fetch events from the server
     fetch(`/events/${encodeURIComponent(username)}`)

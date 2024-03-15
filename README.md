@@ -75,7 +75,7 @@ In my Javascript deliverable, I completed the following:
 
 # Webservice Deliverable
 I added a lot of functionality that was directed by the course readings, including stuff related to Node.js and Express.
-- Built server on port 3000, added key server functionality.
+- Built server on port 3000, added key server functionality, API.
 - Added webservice endpoint for getting and pushing event object
     - Still allows event object creation and display on profile
     - Connected event objects based on username
@@ -83,3 +83,4 @@ I added a lot of functionality that was directed by the course readings, includi
 - Added endpoints for logging in, saving usernames, and allowing username changes.
     -When username is changed, all data is transferes from old to new username.
 - Future endpoint + file for mainpage updates based on other/all users
+- Deployed Simon

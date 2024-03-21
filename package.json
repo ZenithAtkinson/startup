@@ -1,0 +1,14 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "**FeastFinder:** the go-to app for college students seeking free or low-cost food events on campus. This platform connects students with up-to-date information on where to find free meals, snacks, and food-related gatherings. Whether it's a service activity, a guest lecture, or a social event, if there's free food, it's on FeastFinder. Save money, discover new events, and enjoy the campus life to its fullest!",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.30"
+  }
+}

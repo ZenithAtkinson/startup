@@ -30,25 +30,21 @@ function getUserByToken(token) {
   return userCollection.findOne({ token: token });
 }
 
-async function createUser(email, password, username) {
-  // Check if the user or username already exists
+async function createUser(email, password) {
+  const passwordHash = await bcrypt.hash(password, 10);
   const emailExists = await userCollection.findOne({ email: email });
-  const usernameExists = await userCollection.findOne({ username: username });
+  //const usernameExists = await userCollection.findOne({ username: username });
   if (emailExists || usernameExists) {
     throw new Error(emailExists ? 'Email already exists' : 'Username already exists');
   }
-
-  // Hash the password before we insert it into the database
-  const passwordHash = await bcrypt.hash(password, 10);
-
+  
   const user = {
     email: email,
-    username: username, // Include the username in the user object
     password: passwordHash,
     token: uuid.v4(),
   };
   await userCollection.insertOne(user);
-
+  
   return user;
 }
 

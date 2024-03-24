@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const database = require('database')
+const database = require('./database');
 const app = express();
 const cors = require('cors');
 app.use(cors());
@@ -18,6 +18,35 @@ app.use(`/api`, apiRouter);
 //var apiRouter = express.Router();
 
 let events = []; //this array will store event objects, including a 'username' property
+
+// Adjust the API route for user login
+apiRouter.post('/api/auth/login', async (req, res) => {
+  const { email, password } = req.body; // Assuming the front end sends the email as 'userName'
+  try {
+      const user = await database.loginUser(email, password);
+      // Consider implementing a way to set user session or token here
+      res.status(200).json({ message: "Login successful", userName: user.username });
+  } catch (error) {
+      res.status(401).json({ message: error.message });
+  }
+});
+
+// Adjust the API route for user creation
+apiRouter.post('/api/auth/create', async (req, res) => {
+  const { email, password, userName: username } = req.body; // Assuming userName is the actual username
+  try {
+      const user = await database.createUser(email, password, username);
+      // Similarly, handle session or token setting
+      res.status(201).json({ message: "User created successfully", userName: username });
+  } catch (error) {
+      res.status(500).json({ message: error.message });
+  }
+});
+
+apiRouter.delete('/api/auth/logout', (req, res) => {
+  // Invalidate session or token here
+  res.status(200).json({ message: "Logout successful" });
+});
 
 //Existing user endpoint (unchanged)
 app.get('/user/:username', (req, res) => {

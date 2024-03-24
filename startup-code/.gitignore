@@ -1,4 +1,8 @@
 #ignoring these files in git add .
 #Need to remove it from being tracked, WITHOUT deleting it
-node_modules
+.DS_Store
+node_modules/
+.vscode/
+dbkeys.sh
+cookie.txt
 dbConfig.json

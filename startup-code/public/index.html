@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css"> <!--CSS link-->
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Feast Finder HTML</title>
-    <script src="login.js"></script>
-    <script src="usernames.js"></script>
-    <script src="mainpage_events.js"></script>
+    <title>College Feast Finder</title>
+    <script src="login.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,86 +19,65 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-        
-        <div class="login-sect" id="login-sect"><!-- where the login png + link(?) are. Popup?-->
-        <input type="text" id="name" placeholder="Your name here" />
-        <button class="btn btn-primary" onclick="login()">Login</button>
+
+        <!-- Displayed when needing authentication -->
+        <div id="authPlaceholder">
+            <div id="loginControls" style="display: none">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">@</span>
+                    <input class="form-control" type="text" id="userName" placeholder="your@email.com" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">🔒</span>
+                    <input class="form-control" type="password" id="userPassword" placeholder="password" />
+                </div>
+                <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
+                <button type="button" class="btn btn-primary" onclick="createUser()">Create</button>
+            </div>
+            <!-- Displayed when ready to play -->
+            <div id="playControls" style="display: none">
+                <div id="playerName"></div>
+                <button type="button" class="btn btn-primary" onclick="play()">Play</button>
+                <button type="button" class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
         </div>
-        <div id ="login-img">
-            <a href="user_profile.html">
-            <img src="login-icon.png" width="40" height="40" />
-            </a>
+
+        <div id="login-img">
+            <img src="login-icon.png" width="40" height="40"/>
         </div>
     </header>
-    <!-- LOGIN FORM POPUP THINGY RIPPED FROM KSL, cant do this until I have javascript -->
-    <!-- <div id="login-form-popup" class="login-popup">
-        -->
-        <!--<form>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button type="submit">Login</button>
-            <button type="button" onclick="toggleLoginForm()">Close</button>
-        </form>
-    </div> -->
     
     <main>
-            <hr>
-            <section>
-                <!-- Events table -->
-                <h2>Events</h2> <!--Need to make it so each event is clickable and opens up a popup, and said popup has the option for share, like, and comment.-->
-                <!--https://www.linkedin.com/advice/3/how-can-you-create-pop-up-window-html-javascript-skills-html-->
-                <table> <!--Will also need to be populated by javascript i presume or some service--> 
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Time</th>
-                            <th>Location</th>
-                            <th>Details</th>
-                            <th>RSVP</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sample Event</td>
-                            <td>12:00 PM</td>
-                            <td>Location XYZ</td>
-                            <td>Event Details</td>
-                            <td><button>RSVP</button></td>
-                        </tr>
-                        <tr>
-                            <td>Sample Event</td>
-                            <td>12:00 PM</td>
-                            <td>Location XYZ</td>
-                            <td>Event Details</td>
-                            <td><button>RSVP</button></td>
-                        </tr>
-                        <tr>
-                            <td>Sample Event</td>
-                            <td>12:00 PM</td>
-                            <td>Location XYZ</td>
-                            <td>Event Details</td>
-                            <td><button>RSVP</button></td>
-                        </tr>
-                        <tr>
-                            <td>Sample Event</td>
-                            <td>12:00 PM</td>
-                            <td>Location XYZ</td>
-                            <td>Event Details</td>
-                            <td><button>RSVP</button></td>
-                        </tr>
-                        <!-- need to add the actual events rows here-->
-                    </tbody>
-                </table>
-            </section>
-            <hr>
-            <!--Removed old login box-->
-            </form>
+        <hr>
+        <section>
+            <h2>Events</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Details</th>
+                        <th>RSVP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample event -->
+                    <tr>
+                        <td>Sample Event</td>
+                        <td>12:00 PM</td>
+                        <td>Location XYZ</td>
+                        <td>Event Details</td>
+                        <td><button>RSVP</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <hr>
-        
-        <footer>
-            <a href="https://github.com/ZenithAtkinson/startup" style="color: white">GitHub</a>
-        </footer>
     </main>
+    
+    <footer>
+        <a href="https://github.com/ZenithAtkinson/startup" style="color: white">GitHub</a>
+    </footer>
 </body>
 </html>

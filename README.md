@@ -84,3 +84,11 @@ I added a lot of functionality that was directed by the course readings, includi
     -When username is changed, all data is transferes from old to new username.
 - Future endpoint + file for mainpage updates based on other/all users
 - Deployed Simon
+
+# Login deliverable
+This one took me much longer than I expected, as I was trying to bite off more than I could chew. Was attempting to add a third username variable to logging in but couldnt get it to work, I figure we do it later.
+- MongoDB account created and attached with credentials to the website, credentials in git ignore.
+- Created cluster takes data and stores it for users from the website.
+- Added ability for a user to create an account
+- Created account has hashed password and cookie sessions associated with email(username)
+- User can log in with their account and it attaches it to the current cookie session until they log out.

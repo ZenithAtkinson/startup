@@ -13,9 +13,10 @@
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "express": "^4.19.1",
+    "express": "^4.19.2",
     "give-me-a-joke": "^0.5.1",
     "mongo": "^0.1.0",
-    "mongodb": "^6.5.0"
+    "mongodb": "^6.5.0",
+    "uuid": "^9.0.1"
   }
 }

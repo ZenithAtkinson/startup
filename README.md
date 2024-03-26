@@ -92,3 +92,5 @@ This one took me much longer than I expected, as I was trying to bite off more t
 - Added ability for a user to create an account
 - Created account has hashed password and cookie sessions associated with email(username)
 - User can log in with their account and it attaches it to the current cookie session until they log out.
+- Added secure API for the user and their information
+- Added functions related for events, not used yet.

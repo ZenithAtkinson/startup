@@ -107,7 +107,7 @@ secureApiRouter.get('/events/:username', async (req, res) => {
   }
 });
 
-//xisting endpoint to add a new event, including username in the event data
+/*//xisting endpoint to add a new event, including username in the event data
 app.post('/events', (req, res) => {
   const eventData = req.body; // Assumes eventData includes 'username'
   events.unshift(eventData); // Add the new event at the start of the array
@@ -119,7 +119,7 @@ app.get('/events/:username', (req, res) => {
   const username = req.params.username;
   const userEvents = events.filter(event => event.username === username);
   res.json(userEvents);
-});
+});*/
 
 //existing endpoint for updating username
 app.put('/user/:oldUsername', (req, res) => {

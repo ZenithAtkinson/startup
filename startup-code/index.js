@@ -6,7 +6,6 @@ const database = require('./database');
 const app = express();
 const cors = require('cors');
 const { addEvent, getEventsForUser } = require('./database');
-const { peerProxy } = require('./peerProxy.js');
 
 app.use(cors());
 app.use(express.json());
@@ -144,8 +143,6 @@ app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
 });
 
-const httpService = app.listen(port, () => {
+app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-peerProxy(httpService);

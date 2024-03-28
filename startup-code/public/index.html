@@ -70,7 +70,7 @@
         <hr>
         <section>
             <h2>Events</h2>
-            <table>
+            <table id="eventsTable">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -81,14 +81,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Sample event -->
-                    <tr>
-                        <td>Sample Event</td>
-                        <td>12:00 PM</td>
-                        <td>Location XYZ</td>
-                        <td>Event Details</td>
-                        <td><button>RSVP</button></td>
-                    </tr>
+                    <!-- Events will be populated here -->
                 </tbody>
             </table>
         </section>
@@ -103,5 +96,22 @@
       crossorigin="anonymous"
     ></script>
     </footer>
+    <script>
+        // Connect to WebSocket server
+        const ws = new WebSocket('ws://localhost:9900/ws'); // Change URL to match your server
+        
+        ws.onmessage = function(event) {
+            const eventData = JSON.parse(event.data);
+            const tableBody = document.querySelector('#eventsTable tbody');
+            const newRow = `<tr>
+                                <td>${eventData.name}</td>
+                                <td>${eventData.time}</td>
+                                <td>${eventData.location}</td>
+                                <td>${eventData.details}</td>
+                                <td><button>RSVP</button></td>
+                            </tr>`;
+            tableBody.innerHTML += newRow;
+        };
+    </script>
 </body>
 </html>
